@@ -24,7 +24,7 @@ colnames(detections)[1]<-"Date_Time" # let's rename it so it is easier to call t
 detections <- mutate(detections, Receiver = as.factor(Receiver), Transmitter = as.factor(Transmitter))
 head(detections)
 
-##################################################################
+###########################################################################################################
 library(ggplot2)
 library(maps)
 library(ggthemes)
@@ -46,7 +46,7 @@ map <- world +
 
 map
 
-########get unique locations##################################################
+########get unique locations##############################################################################
 detections3 <- unique(detections2[,c("Station.Name", "Longitude", "Latitude")])
 map <- map +
   geom_point(aes(x = Longitude, y = Latitude),
@@ -57,13 +57,13 @@ map <- map +
   labs(size = 'Followers')
 
 map
-##############################################################################
+########################################################################################################
 # min & max values
 # min(detections2$Latitude) 
 # max(detections2$Latitude)
 # min(detections2$Longitude)
 # max(detections2$Longitude)
-##################################################################
+########################################################################################################
 
 
 
