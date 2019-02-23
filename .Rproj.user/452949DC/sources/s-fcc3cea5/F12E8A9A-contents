@@ -1,0 +1,79 @@
+# R packages
+library(tidyverse)
+library(lubridate)
+
+# R package for colors
+#install.packages("fields")   # make this a comment after running it
+
+library(fields)
+
+# Location of sample data
+demo_data_folder <- "JWSDetectionData"
+
+# 1. Read in the data files. 
+files <- list.files(path = demo_data_folder, pattern="csv", full.names = TRUE) # list all the csv files in this folder
+
+detections <- NULL # set this to null for now, so that we can add to it later
+for( f in files ) { # for each file... 
+  temp_rows <- read_csv(f)  # load the data from one file
+  detections <- bind_rows(detections, temp_rows)
+}
+
+head(detections)
+# clean up environment by removing names no longer needed
+remove(temp_rows, f, files) 
+
+colnames(detections)[1]<-"Date_Time" # let's rename it so it is easier to call to
+#detections$Date_Time[1:5]
+
+# Convert the Receiver and Transmitter to factors (i.e. categories)
+detections <- mutate(detections, Receiver = as.factor(Receiver), Transmitter = as.factor(Transmitter))
+#head(detections)
+
+################################# done changing the data ###############################################
+
+# check min & max value
+#min(detections$Latitude)
+#max(detections$Latitude)
+
+# check for equally distributed data
+#quantile(detections$Latitude)
+
+min_lat <- 32.5
+max_lat <- 34.41292
+
+########################################################################################################
+# Using ggplot()   See: https://ggplot2.tidyverse.org/
+########################################################################################################
+
+# Now we want to plot the time of the detection on the x-axis, the Transmitter on the y-axis. 
+# To color it by Latitude
+
+# aes() stands for aesthetic
+
+abacus_plot <- ggplot(data = detections, mapping = aes(x = Date_Time, y = Transmitter)) +
+  geom_point(position = "jitter", mapping = aes(color = Latitude))
+
+# By default, a two-color gradient is used on continuous data
+abacus_plot
+
+########################## color points ################################################################
+# Using scales to use a rainbow of colors instead and limit the data as well.
+# Plotting all data with limits of min/max latitude using rainbow of colors
+abacus_plot_v2 <- abacus_plot + scale_color_gradientn(limits=c(min_lat, max_lat), 
+                                                      breaks = seq(min_lat, max_lat, 0.02), na.value = "#000000",
+                                                      guide="colorbar", aesthetics = "color", colors = rev(tim.colors(256)))
+abacus_plot_v2
+
+# Great, but the legend is too short, we can control the legend in this case let's set the heigh
+abacus_plot_v3 <- abacus_plot_v2  +  theme(legend.key.height = unit(0.1, "npc"))
+abacus_plot_v3
+
+plot_2color_gradient <- abacus_plot + scale_color_continuous(limits=c(min_lat, max_lat), 
+                                                             breaks = seq(min_lat, max_lat, 0.02), 
+                                                             guide="colorbar", aesthetics = "color", 
+                                                             low="darkorange", high="darkorchid") + 
+  theme(legend.key.height = unit(0.1, "npc"))
+
+plot_2color_gradient
+#######################################################################################################

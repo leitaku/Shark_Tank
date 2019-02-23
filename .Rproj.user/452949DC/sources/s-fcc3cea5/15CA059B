@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550951029897.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "15CA059B",
+    "lastKnownWriteTime" : 1550882026,
+    "last_content_update" : 1550882026,
+    "path" : "~/Documents/SharkDetectionsAnalysis/RScriptsDemo/intro-to-mapping.R",
+    "project_path" : "RScriptsDemo/intro-to-mapping.R",
+    "properties" : {
+        "cursorPosition" : "89,25",
+        "scrollLine" : "75"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

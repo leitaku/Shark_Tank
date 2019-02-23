@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550947292345.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "843830127",
+    "id" : "EDED5D49",
+    "lastKnownWriteTime" : 1550955201,
+    "last_content_update" : 1550955201796,
+    "path" : "~/Documents/SharkDetectionsAnalysis/PlotData.R",
+    "project_path" : "PlotData.R",
+    "properties" : {
+        "cursorPosition" : "59,0",
+        "scrollLine" : "39",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

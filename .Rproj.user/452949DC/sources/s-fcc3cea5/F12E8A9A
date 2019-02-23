@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550882761035.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F12E8A9A",
+    "lastKnownWriteTime" : 1550882786,
+    "last_content_update" : 1550885335043,
+    "path" : "~/Documents/SharkDetectionsAnalysis/JWSDetection-abacus.R",
+    "project_path" : "JWSDetection-abacus.R",
+    "properties" : {
+        "cursorPosition" : "34,23",
+        "scrollLine" : "51",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

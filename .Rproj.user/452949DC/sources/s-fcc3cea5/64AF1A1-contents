@@ -1,0 +1,2 @@
+library(rgdal) # for reading in shapefiles
+library(fields) # for a gradient of colors
