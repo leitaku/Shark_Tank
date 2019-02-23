@@ -14,8 +14,8 @@ By. Yoo Jin Chung
     provided by CSULB Shark Lab
   
   -To visualize the data   
-    https://d4tagirl.com/2017/05/how-to-plot-animated-maps-with-gganimate
-    
+  
+    https://d4tagirl.com/2017/05/how-to-plot-animated-maps-with-gganimate   
     https://mikeyharper.uk/animated-plots-with-r/
   
 # Dataset  
