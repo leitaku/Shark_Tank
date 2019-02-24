@@ -1,7 +1,7 @@
 # Google Workshop: Track sharks
 
 ----------------------------------------------------------------------
-By. Yoo Jin Chung
+By. Yoo Jin Chung & Madison Van Horn
 ----------------------------------------------------------------------
 
 # Description
