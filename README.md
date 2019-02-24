@@ -18,7 +18,7 @@ By. Yoo Jin Chung & Madison Van Horn
     https://d4tagirl.com/2017/05/how-to-plot-animated-maps-with-gganimate   
     https://mikeyharper.uk/animated-plots-with-r/
   
-# Dataset: JWSDetectionData  
+# Dataset: VEMCO VR2W Receivers 
     
   -Explanation of the dataset
   
